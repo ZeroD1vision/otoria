@@ -1,0 +1,16 @@
+# Go
+/anima/bin/
+*.exe
+
+# C/C++
+*.o
+/soma/build/
+
+# UI
+/manus/build/
+
+# IDE
+.vscode/
+
+# Academic (пока без доп репы просто папка, придется синхрить не через git)
+docs/academic/

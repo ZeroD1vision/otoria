@@ -1,0 +1,14 @@
+# <type>(<scope>): краткое описание в повелительном наклонении, до 50 символов (Английский язык)
+#
+# Тело коммита: что и почему изменено (не "как")(Английский язык). Ентер на 72 символах.
+#
+#
+# Footer, если нужен:
+# BREAKING CHANGE: описание несовместимого изменения (Английский язык)
+# Refs #<issue-number>
+#
+# Типы и области коммитов:
+# type: feat | fix | docs | refactor | perf | test | chore | ci | revert
+# scope: soma | anima | manus | proto | infra | docs
+#
+# Language: English only.
