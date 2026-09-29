@@ -62,7 +62,6 @@ otoria/
 ├── .github/                 # шаблоны issue/PR, workflows CI, CD
 ├── GOVERNANCE.md
 ├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
 ├── CODEOWNERS
 ├── VERSIONING.md
 └── README.md
