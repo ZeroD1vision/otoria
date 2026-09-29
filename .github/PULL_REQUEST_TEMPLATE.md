@@ -10,7 +10,7 @@ Related to: [#]
 - [ ] soma
 - [ ] anima
 - [ ] manus
-- [ ] proto (requires approval from all three — see CODEOWNERS)
+- [ ] proto (requires approval from all three)
 - [ ] infra
 - [ ] docs
 
