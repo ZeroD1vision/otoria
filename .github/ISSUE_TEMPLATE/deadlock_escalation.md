@@ -1,6 +1,6 @@
 ---
 name: Deadlock escalation
-about: Владелец зоны недоступен, а решение нужно сейчас (см. GOVERNANCE.md §6)
+about: Владелец зоны недоступен, а решение нужно сейчас (см. GOVERNANCE.md пар.6)
 labels: deadlock-escalation
 ---
 

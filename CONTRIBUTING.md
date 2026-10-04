@@ -94,7 +94,15 @@ git config commit.template .gitmessage
 - Каждая задача - issue с меткой модуля (`soma`, `anima`, `manus`, `proto`, `infra`, `docs`) и типом (`bug`, `feature`, `question`, `deadlock-problem`).
 - Крупные архитектурные решения оформляются как ADR (`docs/adr/`), а не только issue.
 
-## 6. Стиль кода
+## 6. Milestones
+
+Формат: `<module>: <Nn> — <краткое описание>`
+
+Примеры: `anima: A1 — mocked skeleton`, `soma: S1 — hotword + VAD`, `manus: AG1 — mcp server skeleton`
+
+`<module>` = имя папки верхнего уровня (`anima`, `soma`, `manus`). Нумерация `Nn` — внутренняя, своя для каждого модуля.
+
+## 7. Стиль кода
 
 | Модуль | Язык | Линтер-форматтер |
 |---|---|---|
@@ -104,6 +112,6 @@ git config commit.template .gitmessage
 
 Все линтеры запускаются в CI и должны проходить без ошибок перед мержем.
 
-## 7. Версионирование и релизы
+## 8. Версионирование и релизы
 
 См. [`VERSIONING.md`](./VERSIONING.md).
