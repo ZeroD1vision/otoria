@@ -96,11 +96,11 @@ git config commit.template .gitmessage
 
 ## 6. Milestones
 
-Формат: `<module>: <Nn> — <краткое описание>`
+Формат: `<module>: <Nn> - <краткое описание>`
 
-Примеры: `anima: A1 — mocked skeleton`, `soma: S1 — hotword + VAD`, `manus: AG1 — mcp server skeleton`
+Примеры: `anima: A1 - mocked skeleton`, `soma: S1 - hotword + VAD`, `manus: AG1 - mcp server skeleton`
 
-`<module>` = имя папки верхнего уровня (`anima`, `soma`, `manus`). Нумерация `Nn` — внутренняя, своя для каждого модуля.
+`<module>` = имя папки верхнего уровня (`anima`, `soma`, `manus`). Нумерация `Nn` - внутренняя, своя для каждого модуля.
 
 ## 7. Стиль кода
 
