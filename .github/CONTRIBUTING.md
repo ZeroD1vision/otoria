@@ -66,9 +66,9 @@ fix(soma): clear bugs with
 - Не переписывать историю чужих коммитов (`rebase -i`, `commit --amend` на чужой коммит, `push --force` в `main`) - авторство неприкосновенно (см. `GOVERNANCE.md`).
 - `git commit --amend` разрешён только на своих ещё не запушенных и не смерженных коммитах.
 
-Шаблон коммит-сообщения - см. [`.gitmessage`](./.gitmessage), подключается командой:
+Шаблон коммит-сообщения - см. [`.gitmessage`](./.github/.gitmessage), подключается командой:
 ```bash
-git config commit.template .gitmessage
+git config commit.template ./.github/.gitmessage
 ```
 если что.
 
