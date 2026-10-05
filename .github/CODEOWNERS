@@ -1,0 +1,17 @@
+# Каждый PR требует approve владельца затронутой зоны.
+# Синтаксис: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Аппаратная часть, прошивки, звук на Orange Pi - Саша
+/soma/                      @sanlexandro
+
+# Оркестраиция, бэкенд, DevOps, инфраструктура - Артемий
+/anima/                     @ZeroD1vision
+/infra/                     @ZeroD1vision
+
+# Десктоп-агент, UI - Пахан
+/manus/                     @TrySquadDF
+
+# Общие зоны - требуют согласия всех троих
+/proto/                     @sanlexandro @ZeroD1vision @TrySquadDF
+/docs/ARCHITECTURE.md       @sanlexandro @ZeroD1vision @TrySquadDF
+/GOVERNANCE.md              @sanlexandro @ZeroD1vision @TrySquadDF
