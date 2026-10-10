@@ -1,0 +1,44 @@
+name: Auto Approve Codeowners
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  codeowners-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Проверяем, является ли автор PR владельцем всех измененных файлов
+      - name: Check Codeowners Ownership
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          # Получаем список измененных файлов и список требуемых ревьюеров через GitHub CLI
+          IS_OWNER="true"
+          
+          # Запрашиваем у GitHub данные о проверке CODEOWNERS для этого PR
+          REVIEW_REQUESTS=$(gh pr view "$PR_NUMBER" --json reviewRequests --jq '.reviewRequests[].login' 2>/dev/null || echo "")
+          
+          # Если для PR требуются ревьюеры из-за правил CODEOWNERS, значит автор не является владельцем всех файлов
+          if [ -n "$REVIEW_REQUESTS" ]; then
+            IS_OWNER="false"
+          fi
+          
+          echo "is_owner=$IS_OWNER" >> "$GITHUB_OUTPUT"
+
+      # Если проверка прошла успешно (автор владеет всеми измененными файлами) -> аппрувим
+      - name: Auto Approve
+        if: steps.check.outputs.is_owner == 'true'
+        uses: hmarr/auto-approve-action@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
